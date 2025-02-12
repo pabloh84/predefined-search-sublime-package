@@ -1,0 +1,6 @@
+[
+    {
+        "command": "predefined_search",
+        "caption": "Predefined Search: Run Search" // The name you'll see in the palette
+    }
+]

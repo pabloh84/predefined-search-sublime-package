@@ -1,0 +1,53 @@
+{
+    "searches": [
+    {
+        "name": "EXAMPLE",
+        "pattern": "example_find",
+        "replace_pattern": "example_replace",
+        /*<project filters>,<open folders>,<current file>,<open files>,PATHs,exclusions...*/
+        "where": "<project>",
+        "whole_word": true,
+        "regex": true,
+        "case_sensitive": true,
+    },
+    {
+        "name": "KAKA",
+        "pattern": "TODO",
+        "where": "/home/pablo",
+        "regex": false,
+        "case_sensitive": true,
+        "whole_word": true
+    },
+    {
+        "name": "TODO Comments",
+        "pattern": "TODO",
+        "where": "<open files>",
+        "regex": false,
+        "case_sensitive": false,
+        "whole_word": false
+    },
+    {
+        "name": "FIXME Comments",
+        "pattern": "FIXME",
+        "where": "<open files>",
+        "regex": false,
+        "case_sensitive": false,
+        "whole_word": false
+    },
+    {
+        "name": "Class Definitions",
+        "pattern": "class ",
+        "where": "<project>",
+        "regex": false,
+        "case_sensitive": true,
+        "whole_word": false
+    },
+    {
+        "name": "Function Definitions",
+        "pattern": "def ",
+        "where": "<project>",
+        "regex": false,
+        "case_sensitive": true,
+        "whole_word": false
+    },]
+}

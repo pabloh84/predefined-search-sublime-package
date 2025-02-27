@@ -27,15 +27,14 @@ class PredefinedSearchCommand(sublime_plugin.WindowCommand):
         # Show the Find in Files panel
         print("run_search", search)
         # self.window.run_command("show_panel", {"panel": "find_in_files"})
-        self.window.run_command("show_panel", {
-            "panel": "find_in_files",
-            "pattern": search["pattern"],
-            "where": search["where"],
-            "whole_word": search["whole_word"],
-            "regex": search["regex"],
-            "case_sensitive": search["case_sensitive"],
-            "replace_pattern": search["replace_pattern"],
-            "preserve_case": True,
-            "show_context": False,
-            "use_buffer": False,
-        })
+        command_args = {"panel": "find_in_files",}
+
+        optional_keys = ["pattern", "where", "whole_word", "regex", "case_sensitive", "replace_pattern", "preserve_case", "show_context","use_buffer"]
+
+        for key in optional_keys:
+            if key in search:
+                command_args[key] = search[key]
+
+        self.window.run_command("show_panel", command_args)
+
+
